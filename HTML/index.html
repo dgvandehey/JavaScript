@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+<title>Pizza Drill Demo</title>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<meta content="width=device-width,initial-scale=1.0" name="viewport">
+<link type="text/css" rel="stylesheet" href=".CSS/Pizza_Menu.css"/>
+</head>
+<body>
+	<div id="menuBG">
+	<h1 style="margin:0 0px 0 20px;">Pizza Drill Tutorial</h1>
+	<input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+	<form id="frmmenu">
+	<div class="menu left">
+	<h3>Pizza Size</h3>
+	<input class="size" type="radio"  name="Size" value="Personal Pizza">1 Personal $6.00</input><br>
+	<input class="size" type="radio"  name="Size" value="Medium Pizza">2 Medium $10.00</input><br>
+	<input class="size" type="radio"  name="Size" value="Large Pizza">3 Large $14.00</input><br>
+	<input class="size" type="radio"  name="Size" value="Extra Large Pizza">4 Extra Large $16.00</input><br>
+	</div>
+	
+	<div class="menu right">
+	<h3>Meats<span class="smallFont">(First topping is complimentary. Additional meat items are $1.00 each extra</span></h3>
+	<input class="meats" type="checkbox" name="Meat" value="Pepperoni"> Pepperoni</input><br>
+	<input class="meats" type="checkbox" name="Meat" value="Sausage"> Sausage</input><br>
+	<input class="meats" type="checkbox" name="Meat" value="Canadian Bacon"> Canadian Bacon</input><br>
+	<input class="meats" type="checkbox" name="Meat" value="Ground Beef"> Ground Beef</input><br>
+	<input class="meats" type="checkbox" name="Meat" value="Anchovy"> Anchovy</input><br>
+	<input class="meats" type="checkbox" name="Meat" value="Chicken"> Chicken</input><br>
+	</div>
+<div class="menu bottom">
+	<h3>Cheese Selection<span class="smallFont">(First topping is complimentary. Extra cheese is $3.00 per any size pizza</span></h3></h3>
+	<input class="cheese" type="radio" name="cheese" value="Regular">Regular</input>&nbsp&nbsp
+	<input class="cheese" type="radio" name="cheese" value="No Cheese">No Cheese</input>&nbsp&nbsp
+	<input class="cheese" type="radio" name="cheese" value="Extra Cheese">Extra Cheese</input>&nbsp&nbsp
+	
+<div class="menu bottom right">
+	<h3>Crust Selection<span class="smallFont">$3.00 for Cheese Stuffed Crust(All other crusts are complementary).</span></h3></h3>
+	<input class="crust" type="radio" name="crust" value="Plain Crust">Plain Crust</input>&nbsp&nbsp
+	<input class="crust" type="radio" name="crust" value="Garlic Butter Crust">Garlic Butter Crust</input>&nbsp&nbsp
+	<input class="crust" type="radio" name="crust" value="Cheese Stuffed Crust">Cheese Stuffed Crust</input>&nbsp&nbsp
+	<input class="crust" type="radio" name="crust" value="Spicy Crust">Spicy Crust</input>&nbsp&nbsp
+	<input class="crust" type="radio" name="crust" value="House Special Crust">House Special Crust</input>&nbsp&nbsp
+<div class="menu bottom left">
+	<h3>Sauce Selection</h3>
+	<input class="sauce" type="radio" name="sauce" value="Marinara Sauce">Marinara Sauce</input>&nbsp&nbsp
+	<input class="sauce" type="radio" name="sauce" value="White Sauce">White Sauce</input>&nbsp&nbsp
+	<input class="sauce" type="radio" name="sauce" value="Barbecue Sauce">Barbecue Sauce</input>&nbsp&nbsp
+	<input class="sauce" type="radio" name="sauce" value="No Sauce">No Sauce</input>&nbsp&nbsp
+<div class="center">
+	<h3>Veggies<span class="smallFont">(First topping is complimentary. Additional veggies are $1.00 each extra</span></h3>
+	<input class="veggies" type="checkbox" name="veggies" value="Tomatoes"> Tomatoes</input>
+	<input class="veggies" type="checkbox" name="veggies" value="Onions"> Onions</input>
+	<input class="veggies" type="checkbox" name="veggies" value="Olives"> Olives</input>
+	<input class="veggies" type="checkbox" name="veggies" value="Green Peppers"> Green Peppers</input>
+	<input class="veggies" type="checkbox" name="veggies" value="Mushrooms"> Mushrooms</input>
+	<input class="veggies" type="checkbox" name="veggies" value="Pineapple"> Pineapple</input>
+	<input class="veggies" type="checkbox" name="veggies" value="Spinach"> Spinach</input>
+	<input class="veggies" type="checkbox" name="veggies" value="Jalapeno"> Jalapeno</input>	
+<div id="cart">
+		<div id="showText"></div>
+		<div id="totalPrice"></div>
+	</div>
+	</form>
+	</div>
+	<script src="./JavaScript/final_drill_basic.js">
+	
+
+
+	</script>
+	
+</body>
+</html>
