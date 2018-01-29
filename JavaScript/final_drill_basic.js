@@ -19,15 +19,11 @@ function getReceipt(){
 		}else if(selectedSize==="Extra Large Pizza"){
 			sizeTotal=16;
 		}
-		runningTotal=sizeTotal;
+		runningTotal=runningTotal+sizeTotal;
 		console.log(selectedSize+"=$"+sizeTotal+".00");
 		console.log("size text1: "+text1);
 		console.log("subtotal:$"+runningTotal+".00");
 		getMeat(runningTotal,text1);
-		getCheese(runningTotal,text1);
-		getVeggies(runningTotal,text1);
-		getSauce(runningTotal,text1);
-		getCrust(runningTotal,text1)
 		};
 	function getMeat(runningTotal,text1){
 		var meatTotal=0;
@@ -46,13 +42,15 @@ function getReceipt(){
 	}else{
 		meatTotal=0;
 	}
-	runningTotal=(runningTotal+meatTotal);
+	runningTotal=runningTotal+meatTotal;
 	console.log("total selected meat items:"+meatCount);
+	console.log("Early Meat Total:$"+runningTotal+".00");
 	console.log(meatCount+"meat-1 free meat="+"$"+meatTotal+".00");
 	console.log("meat text1: "+text1);
 	console.log("Purchase Total: "+"$"+runningTotal+".00");
 	document.getElementById("showText").innerHTML=text1;
 	document.getElementById("totalPrice").innerHTML="<h3>Total:<strong>$"+runningTotal+".00"+"</strong></h3>";
+	getCheese(runningTotal,text1);
 	};
 function getCheese(runningTotal,text1){
 		var cheeseTotal=0;
@@ -72,11 +70,12 @@ function getCheese(runningTotal,text1){
 			cheeseTotal=3;
 		}
 		
-		runningTotal=cheeseTotal;
+		runningTotal=runningTotal+cheeseTotal;
 		console.log(selectedCheese+"=$"+cheeseTotal+".00");
 		console.log("cheese text1: "+text1);
 		console.log("subtotal:$"+runningTotal+".00");
-};
+		getVeggies(runningTotal,text1);
+		};
 function getVeggies(runningTotal,text1){
 		var veggiesTotal=0;
 		var selectedVeggies=[];
@@ -94,19 +93,20 @@ function getVeggies(runningTotal,text1){
 	}else{
 		veggiesTotal=0;
 	}
-	runningTotal=(runningTotal+veggiesTotal);
+	runningTotal=runningTotal+veggiesTotal;
 	console.log("total selected veggies items:"+veggiesCount);
 	console.log(veggiesCount+"veggies-1 free veggies="+"$"+veggiesTotal+".00");
 	console.log("veggies text1: "+text1);
 	console.log("Purchase Total: "+"$"+runningTotal+".00");
 	document.getElementById("showText").innerHTML=text1;
 	document.getElementById("totalPrice").innerHTML="<h3>Total:<strong>$"+runningTotal+".00"+"</strong></h3>";
+	getCrust(runningTotal,text1);
 	};
 function getCrust(runningTotal,text1){
 		var crustTotal=0;
 		var selectedCrust=[];
 		var crustArray=document.getElementsByClassName("crust");
-		for(var m=0; m<cheeseArray.length;m++){
+		for(var m=0; m<crustArray.length;m++){
 			if(crustArray[m].checked){
 				var selectedCrust=crustArray[m].value;
 				text1=text1+selectedCrust+"<br>";
@@ -123,19 +123,20 @@ function getCrust(runningTotal,text1){
 		}else if(selectedCrust==="Home Special Crust"){
 			crustTotal=0;
 		}
-		runningTotal=crustTotal;
+		runningTotal=runningTotal+crustTotal;
 		console.log(selectedCrust+"=$"+crustTotal+".00");
 		console.log("crust text1: "+text1);
 		console.log("subtotal:$"+runningTotal+".00");
-};
+		getSauce(runningTotal,text1)
+		};
 function getSauce(runningTotal,text1){
-		var SauceTotal=0;
+		var sauceTotal=0;
 		var selectedSauce=[];
 		var sauceArray=document.getElementsByClassName("sauce");
-		for(var a=0; a<cheeseArray.length;a++){
+		for(var a=0; a<sauceArray.length;a++){
 			if(sauceArray[a].checked){
-				var selectedSauce=SauceArray[a].value;
-				text1=text1+selectedCrust+"<br>";
+				var selectedSauce=sauceArray[a].value;
+				text1=text1+selectedSauce+"<br>";
 		}
 	}
 		if (selectedSauce==="Marinara Sauce"){
@@ -147,8 +148,9 @@ function getSauce(runningTotal,text1){
 		}else if(selectedSauce==="No Sauce"){
 			sauceTotal=0;
 		}
-		runningTotal=sauceTotal;
+		runningTotal=runningTotal+sauceTotal;
 		console.log(selectedSauce+"=$"+sauceTotal+".00");
 		console.log("sauce text1: "+text1);
 		console.log("subtotal:$"+runningTotal+".00");
-};
+		
+		};
